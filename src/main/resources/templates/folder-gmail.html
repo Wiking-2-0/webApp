@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>DASHGUM - Bootstrap Admin Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet"
+          th:href="@{/css/bootstrap.css}"/>
+    <!--external css-->
+    <link href="../static/font-awesome/css/font-awesome.css" rel="stylesheet"
+          th:href="@{/font-awesome/css/font-awesome.css}"/>
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/style.css" rel="stylesheet"
+          th:href="@{/css/style.css}"/>
+    <link href="../static/css/style-responsive.css" rel="stylesheet"
+          th:href="@{/css/style-responsive.css}"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<section id="container" >
+
+    <div data-th-replace="fragments/navbar :: nav-bar"></div>
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+            <div class="showback">
+                <h4><i class="fa"></i>Папки </h4>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default">Создать новую папку</button>
+                    <button type="button" class="btn btn-default">Удалить папку</button>
+                    <!--<button type="button" class="btn btn-default">Спам</button>-->
+                </div>
+            </div>
+            <h3><i class="fa"></i>mail1@gmail.com</h3>
+
+            <div class="row mt">
+                <div class="col-lg-12">
+
+                    <div class="row">
+
+                        <!-- Google panel -->
+                        <div class="col-lg-3 col-md-4 col-sm-4 mb">
+                            <h3  class="text-center">Неотсортированные</h3>
+                            <a href="/">
+                                <img src="../img/folder.png" style="width: 230px;"/>
+                            </a>
+                                <p class="user"> Новых писем - </p>
+                            </div>
+                        <!-- /col-md-4 -->
+
+                        <div class="col-lg-3 col-md-4 col-sm-4 mb">
+                            <h3  class="text-center">Оповещения</h3>
+                            <a href="/">
+                                <img src="../img/folder.png" style="width: 230px;"/>
+                            </a>
+                            <p class="user"> Новых писем - </p>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-4 mb">
+                            <h3  class="text-center">Соцсети</h3>
+                            <a href="/">
+                                <img src="../img/folder.png" style="width: 230px;"/>
+                            </a>
+                            <p class="user"> Новых писем - </p>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-4 mb">
+                            <h3  class="text-center">Промоакции</h3>
+                            <a href="/">
+                                <img src="../img/folder.png" style="width: 230px;"/>
+                            </a>
+                            <p class="user"> Новых писем - </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </section><!-- /MAIN CONTENT -->
+
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+        <div class="text-center">
+            2016 - NURE
+            <a href="blank.html#" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>
+    <!--footer end-->
+</section>
+
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="../static/js/jquery.js"
+        th:src="@{js/jquery.js}"></script>
+<script src="../static/js/bootstrap.min.js"
+        th:src="@{js/bootstrap.min.js}" ></script>
+<script src="../static/js/jquery-ui-1.9.2.custom.min.js"
+        th:src="@{js/jquery-ui-1.9.2.custom.min.js}" ></script>
+<script src="../static/js/jquery.ui.touch-punch.min.js"
+        th:src="@{js/jquery.ui.touch-punch.min.js}" ></script>
+<script class="include" type="text/javascript" src="../static/js/jquery.dcjqaccordion.2.7.js"
+        th:src="@{js/js/jquery.dcjqaccordion.2.7.js}" ></script>
+<script src="../static/js/jquery.scrollTo.min.js"
+        th:src="@{js/jquery.scrollTo.min.js}" ></script>
+<script src="../static/js/jquery.nicescroll.js" type="text/javascript"
+        th:src="@{js/jquery.nicescroll.js}" ></script>
+
+
+<!--common script for all pages-->
+<script src="../static/js/common-scripts.js"
+        th:src="@{js/common-scripts.js}"></script>
+
+<!--script for this page-->
+
+<script>
+    //custom select box
+
+    $(function(){
+        $('select.styled').customSelect();
+    });
+
+</script>
+
+</body>
+</html>

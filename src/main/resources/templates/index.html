@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>DASHGUM - Bootstrap Admin Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" 
+			th:href="@{/css/bootstrap.css}"/>
+    <!--external css-->
+    <link href="../static/font-awesome/css/font-awesome.css" rel="stylesheet"
+				th:href="@{/font-awesome/css/font-awesome.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/js/bootstrap-datepicker/css/datepicker.css"
+                th:href="@{/js/bootstrap-datepicker/css/datepicker.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/js/bootstrap-daterangepicker/daterangepicker.css"
+                th:href="@{/js/bootstrap-daterangepicker/daterangepicker.css}"/>
+        
+    <!-- Custom styles for this template -->
+    <link href="../static/css/style.css" rel="stylesheet"
+				th:href="@{/css/style.css}"/>
+    <link href="../static/css/style-responsive.css" rel="stylesheet"
+				th:href="@{/css/style-responsive.css}"/>
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <section id="container" >
+
+      <div data-th-replace="fragments/navbar :: nav-bar"></div>
+
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper site-min-height">
+              <h1>Выберите почтовый ящик</h1>
+              <div class="row mt">
+                  <div class="col-lg-12">
+
+                      <div class="row">
+                          <!-- Google panel -->
+                          <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                              <div class="google-panel pn" onclick="location.href='/inbox-gmail.html'">
+                                  <!--<a href="/inbox-gmail.html" class="anchor_div"></a>-->
+                                  <i class="fa fa-google fa-6x"></i>
+                                  <p></p>
+                                  <p class="user"> mail1@gmail.com</p>
+                              </div>
+                          </div><!-- /col-md-4 -->
+
+                          <!-- Ukrnet panel -->
+                          <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                              <div class="ukrnet-panel pn" onclick="location.href='/inbox-ukrnet.html'">
+                                  <!--<a href="/inbox-ukrnet.html" class="anchor_div"></a>-->
+                                  <p></p>
+                                  <p class="user">mail2@ukr.net</p>
+                              </div>
+                          </div><!-- /col-md-4 -->
+
+                          <!-- Yandex panel -->
+                          <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                              <div class="yandex-panel pn" onclick="location.href='/inbox-yandex.html'">
+                                  <!--<a href="/inbox-yandex.html" class="anchor_div"></a>-->
+                                  <p></p>
+                                  <p class="user">mail3@yandex.ua</p>
+                              </div>
+                          </div><!-- /col-md-4 -->
+                      </div>
+                  </div>
+              </div>
+
+
+              <div class="row mt">
+                  <div class="col-lg-12">
+                      <h4><i class="fa"></i>или добавте новый</h4>
+                      <div> <!--class="form-panel"-->
+                          <form class="form-inline" role="form">
+                              <div class="form-group">
+                                  <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                  <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email"/>
+                              </div>
+                              <div class="form-group">
+                                  <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                  <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password"/>
+                              </div>
+                              <button type="submit" class="btn btn-theme">Добавить</button>
+                          </form>
+                      </div><!-- /form-panel -->
+                  </div><!-- /col-lg-12 -->
+              </div><!-- /row -->
+          </section>
+      </section><!-- /MAIN CONTENT -->
+
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2016 - NURE
+              <a href="blank.html#" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="../static/js/jquery.js"
+		th:src="@{/js/jquery.js}"></script>
+    <script src="../static/js/bootstrap.min.js"
+		th:src="@{/js/bootstrap.min.js}" ></script>
+    <script src="../static/js/jquery-ui-1.9.2.custom.min.js"
+		th:src="@{/js/jquery-ui-1.9.2.custom.min.js}" ></script>
+    <script src="../static/js/jquery.ui.touch-punch.min.js"
+		th:src="@{/js/jquery.ui.touch-punch.min.js}" ></script>
+    <script class="include" type="text/javascript" src="../static/js/jquery.dcjqaccordion.2.7.js"
+		th:src="@{/js/js/jquery.dcjqaccordion.2.7.js}" ></script>
+    <script src="../static/js/jquery.scrollTo.min.js"
+		th:src="@{/js/jquery.scrollTo.min.js}" ></script>
+    <script src="../static/js/jquery.nicescroll.js" type="text/javascript"
+		th:src="@{/js/jquery.nicescroll.js}" ></script>
+
+    <!--common script for all pages-->
+    <script src="../static/js/common-scripts.js"
+		th:src="@{/js/common-scripts.js}"></script>
+
+    <!--script for this page-->
+  <script src="../static/js/jquery-ui-1.9.2.custom.min.js"
+        th:src="@{/js/jquery-ui-1.9.2.custom.min.js}"></script>
+  <script src="../static/js/form-component.js"
+        th:src="@{/js/form-component.js}"></script>
+
+
+  <script>
+      //custom select box
+
+      $(function(){
+          $('select.styled').customSelect();
+      });
+
+  </script>
+
+  </body>
+</html>
