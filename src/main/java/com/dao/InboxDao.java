@@ -19,4 +19,6 @@ public interface InboxDao {
     public void deleteInbox(Inbox inbox);
 
     public void updateInbox(Inbox inbox);
+
+    public  void  deleteAllInbox(int mailId);
 }

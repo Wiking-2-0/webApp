@@ -2,6 +2,7 @@ package com.dao.realisation;
 
 import com.dao.InboxDao;
 import com.entity.Inbox;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,14 @@ public class InboxDaoImpl implements InboxDao {
     @Override
     public void deleteInbox(Inbox inbox) {
         getSession().delete(inbox);
+    }
+
+    @Override
+    public void deleteAllInbox(int mailId) {
+        String hql = String.format("delete Inbox where Mail_id = :mailId");
+        Query query = getSession().createQuery(hql);
+        query.setParameter("mailId",mailId);
+        query.executeUpdate();
     }
 
     @Override

@@ -32,6 +32,11 @@ public class MailServiceImpl implements MailService{
         mailDao.deleteMail(mail);
     }
 
+    @Override
+    public void deleteAllMail(int mailId) {
+        mailDao.deleteAllMail(mailId);
+    }
+
    /* @Override
     public void updateMail(Mail mail) {
         mailDao.updateMail(mail);

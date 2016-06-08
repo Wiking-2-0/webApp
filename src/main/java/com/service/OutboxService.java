@@ -16,5 +16,7 @@ public interface OutboxService {
 
     public void deleteOutbox(Outbox outbox);
 
+    public void deleteAllOutbox(int mailId);
+
     public void updateOutbox(Outbox outbox);
 }

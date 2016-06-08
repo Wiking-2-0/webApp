@@ -33,6 +33,11 @@ public class OutboxServiceImpl implements OutboxService{
     }
 
     @Override
+    public void deleteAllOutbox(int mailId) {
+        outboxDao.deleteAllOutbox(mailId);
+    }
+
+    @Override
     public void updateOutbox(Outbox outbox) {
 
     }

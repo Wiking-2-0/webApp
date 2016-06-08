@@ -2,6 +2,7 @@ package com.dao.realisation;
 
 import com.dao.OutboxDao;
 import com.entity.Outbox;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,5 +36,12 @@ public class OutboxDaoImpl implements OutboxDao {
     @Override
     public void deleteOutbox(Outbox outbox) {
         getSession().delete(outbox);
+    }
+
+    @Override
+    public void deleteAllOutbox(int mailId) {
+        String hql = String.format("DELETE FROM outbox WHERE ='Mail_id'",mailId);
+        Query query = getSession().createQuery(hql);
+        query.executeUpdate();
     }
 }

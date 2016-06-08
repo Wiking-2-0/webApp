@@ -18,5 +18,7 @@ public interface OutboxDao {
 
     public void deleteOutbox(Outbox outbox);
 
+    public void deleteAllOutbox(int mailId);
+
     //public void updateOutbox(Outbox outbox);
 }

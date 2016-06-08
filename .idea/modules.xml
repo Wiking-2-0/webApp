@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/email.iml" filepath="$PROJECT_DIR$/email.iml" />
       <module fileurl="file://$PROJECT_DIR$/webApp.iml" filepath="$PROJECT_DIR$/webApp.iml" />
     </modules>
   </component>

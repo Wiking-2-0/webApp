@@ -16,5 +16,7 @@ public interface InboxService {
 
     public void deleteInbox(Inbox inbox);
 
+    public void deleteAllInbox(int mailId);
+
     public void updateInbox(Inbox inbox);
 }

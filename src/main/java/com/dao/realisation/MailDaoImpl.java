@@ -2,6 +2,7 @@ package com.dao.realisation;
 
 import com.dao.MailDao;
 import com.entity.Mail;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,13 @@ public class MailDaoImpl implements MailDao {
     @Override
     public void deleteMail(Mail mail) {
         getSession().delete(mail);
+    }
+
+    @Override
+    public void deleteAllMail(int mailId) {
+        String hql = String.format("DELETE FROM inbox WHERE ='Mail_id'",mailId);
+        Query query = getSession().createQuery(hql);
+        query.executeUpdate();
     }
 
     /*@Override

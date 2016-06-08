@@ -1,6 +1,8 @@
 package com.controller;
 
 import com.entity.*;
+import com.mailWork.GmailMail;
+import com.mailWork.YandexMail;
 import com.service.*;
 import com.service.realization.MailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,8 @@ public class IndexController {
     private InboxService inboxService;
     @Autowired
     private OutboxService outboxService;
+    @Autowired
+    private GmailMail gmailMail;
 
     @RequestMapping(value = "/")
     public String getIndex() {
@@ -75,6 +79,34 @@ public class IndexController {
         //System.out.println(mailService.getAllMails().toString());
         //System.out.println(folderService.getAllFolder().toString());
         //System.out.println(folderService.getById(2));
+
+
+        //String host = "imap.yandex.ru";// change accordingly
+        //String host = "imap.gmail.com";// change accordingly
+        //String host = "imap.ukr.net";// change accordingly
+        //String host = "imap.mail.ru";// change accordingly
+//        String mailStoreType = "imap";
+
+        /*String username = "twink6666@yandex.ua";// change accordingly
+        String password = "123654789";// change accordingly*/
+
+        String username = "forsitezero@gmail.com";// change accordingly
+        String password = "WG4wm10x";// change accordingly
+
+       /* String username = "eugeneavtuhov@ukr.net";// change accordingly
+        String password = "123654789";// change accordingly*/
+
+        /*String username = "avtuhov94@mail.ru";// change accordingly
+        String password = "WG4wm10x";// change accordingly*/
+
+        /*YandexMail yandexMail = new YandexMail();
+        yandexMail.check(username, password);*/
+        //GmailMail gmailMail = new GmailMail();
+        gmailMail.check(username, password);
+        /*UkrnetMail ukrnetMail = new UkrnetMail();
+        ukrnetMail.check(username, password);*/
+        //check(host, mailStoreType, username, password);
+
 
         return "index";
     }

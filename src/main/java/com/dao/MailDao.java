@@ -18,5 +18,7 @@ public interface MailDao {
 
     public void deleteMail(Mail mail);
 
+    public void deleteAllMail(int mailId);
+
     //public void updateMail(Mail Mail);
 }

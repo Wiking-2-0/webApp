@@ -1,5 +1,9 @@
 package com;
 
+import com.mailWork.GmailMail;
+import com.mailWork.UkrnetMail;
+import com.mailWork.YandexMail;
+
 import java.util.Properties;
 import javax.mail.Folder;
 import javax.mail.Message;
@@ -10,7 +14,7 @@ import javax.mail.Store;
 
 public class Main {
 
-    public static void check(String host, String storeType, String user,
+    public void check(String host, String storeType, String user,
                              String password)
     {
         GetMulti gmulti = new GetMulti();
@@ -68,25 +72,30 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String host = "imap.yandex.ru";// change accordingly
+//        String host = "imap.yandex.ru";// change accordingly
         //String host = "imap.gmail.com";// change accordingly
         //String host = "imap.ukr.net";// change accordingly
         //String host = "imap.mail.ru";// change accordingly
-        String mailStoreType = "imap";
+//        String mailStoreType = "imap";
 
-        String username = "twink6666@yandex.ua";// change accordingly
-        String password = "123654789";// change accordingly
+        /*String username = "twink6666@yandex.ua";// change accordingly
+        String password = "123654789";// change accordingly*/
 
-        /*String username = "forsitezero@gmail.com";// change accordingly
-        String password = "WG4wm10x";// change accordingly*/
+        String username = "forsitezero@gmail.com";// change accordingly
+        String password = "WG4wm10x";// change accordingly
 
-     /*   String username = "eugeneavtuhov@ukr.net";// change accordingly
+       /* String username = "eugeneavtuhov@ukr.net";// change accordingly
         String password = "123654789";// change accordingly*/
 
         /*String username = "avtuhov94@mail.ru";// change accordingly
         String password = "WG4wm10x";// change accordingly*/
 
-        check(host, mailStoreType, username, password);
+        //YandexMail.check(username, password);
+        GmailMail gmailMail = new GmailMail();
+        gmailMail.check(username, password);
+        /*UkrnetMail ukrnetMail = new UkrnetMail();
+        ukrnetMail.check(username, password);*/
+        //check(host, mailStoreType, username, password);
 
     }
 

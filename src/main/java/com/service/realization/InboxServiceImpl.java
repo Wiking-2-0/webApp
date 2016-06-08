@@ -3,6 +3,9 @@ package com.service.realization;
 import com.dao.InboxDao;
 import com.entity.Inbox;
 import com.service.InboxService;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -11,6 +14,8 @@ public class InboxServiceImpl implements InboxService{
 
     @Autowired
     InboxDao inboxDao;
+    @Autowired
+    SessionFactory sessionFactory;
 
     @Override
     public List<Inbox> getAllInbox() {
@@ -30,6 +35,11 @@ public class InboxServiceImpl implements InboxService{
     @Override
     public void deleteInbox(Inbox inbox) {
         inboxDao.deleteInbox(inbox);
+    }
+
+    @Override
+    public void deleteAllInbox(int mailId) {
+        inboxDao.deleteAllInbox(mailId);
     }
 
     @Override
