@@ -1,10 +1,7 @@
 package com.controller;
 
-import com.entity.*;
 import com.mailWork.GmailMail;
-import com.mailWork.YandexMail;
 import com.service.*;
-import com.service.realization.MailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,8 +19,8 @@ public class IndexController {
     private InboxService inboxService;
     @Autowired
     private OutboxService outboxService;
-    @Autowired
-    private GmailMail gmailMail;
+   // @Autowired
+    private GmailMail gmailMail = new GmailMail();
 
     @RequestMapping(value = "/")
     public String getIndex() {
